@@ -1,0 +1,168 @@
+@font-face {font-family:"MetaProNormal"; src:url("../fonts/metapro-normal-webfont.woff") format("woff"); font-weight:normal; font-style:normal}
+@font-face {font-family:"MetaProBook"; src:url("../fonts/metapro-book-webfont.woff") format("woff"); font-weight:normal; font-style:normal}
+@font-face {font-family:"MetaProMedium"; src:url("../fonts/metapro-medium-webfont.woff") format("woff"); font-weight:normal; font-style:normal}
+@font-face {font-family:"MetaProBold"; src:url("../fonts/metapro-bold-webfont.woff") format("woff"); font-weight:normal; font-style:normal}
+
+body {min-width:1280px; margin:0; padding:0; font:14px/20px "Open Sans", sans-serif; color:#000; background:#fff}
+
+a {color:#000; outline:none}
+
+img {border:none}
+
+.top {background:#667242}
+.top-inner {max-width:940px; margin:0 auto}
+.top-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.top-menu {float:left; text-transform:uppercase}
+.top-menu ul {margin:0; padding:0; list-style:none}
+.top-menu ul li {float:left; margin:0; padding:0 20px; border-left:1px solid #75824c; height:40px; font:12px/40px MetaProBold, sans-serif}
+.top-menu ul li:first-child {border-left:0; padding-left:0}
+.top-menu ul li a {text-decoration:none; color:#fff}
+
+.top-social {float:left; padding:7px 0 0 54px}
+.top-social ul {margin:0; padding:0; list-style:none}
+.top-social ul li {float:left; margin:0; padding:0 6px 0 0}
+.top-social ul li a {display:block; width:24px; height:24px; background:url(../images/top-social.png)}
+.top-social ul li a.top-social-vk {background-position:left top}
+.top-social ul li a.top-social-fb {background-position:-24px top}
+.top-social ul li a.top-social-in {background-position:-48px top}
+
+.top-cart {float:right; width:140px; height:40px; background:#ffd200; text-align:center; font:12px/40px MetaProBold, sans-serif; color:#000; text-decoration:none; text-transform:uppercase}
+.top-cart img {vertical-align:top; margin:13px 8px 0 0}
+.top-cart span {font-weight:bold; font-family:"Open Sans", sans-serif}
+
+.top-search {float:right; padding:7px 53px 0 0}
+.top-search form {width:220px; height:24px; background:#fff; margin:0; padding:0; border-radius:12px; box-shadow:inset 1px 1px 2px rgba(74, 76, 67, .36)}
+.top-search-input {float:left}
+.top-search-input input {vertical-align:top; width:180px; height:16px; padding:4px 0 4px 11px; margin:0; outline:none; font:12px/16px MetaProBook, sans-serif; color:#000; background:transparent; border:none}
+.top-search-input input::-webkit-input-placeholder {color:#000; opacity:1}
+.top-search-input input::-moz-placeholder {color:#000; opacity:1}
+.top-search-input input:-ms-input-placeholder {color:#000; opacity:1}
+.top-search-submit {float:right; padding:8px 9px 0 0}
+.top-search-submit input {vertical-align:top; width:9px; height:9px; margin:0; padding:0; outline:none; border:none; background:url(../images/top-search.png); cursor:pointer}
+
+header {max-width:940px; margin:0 auto; padding:0 0 39px 0}
+header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.logo {float:left; line-height:0; padding:39px 0 0 0}
+.logo-2 {float:left; line-height:0; padding:37px 0 0 46px}
+.logo-3 {float:left; line-height:0; padding:31px 0 0 25px}
+
+.header-phones {float:right; padding:45px 0 0 0; width:427px}
+.header-phones-inner {width:100%}
+.header-phones-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.header-phones-content {float:left; width:285px; height:30px; background:#eeefea; font-size:13px; line-height:30px}
+.header-phones-item {float:left; padding:0 0 0 13px}
+.header-phones-item+.header-phones-item {padding:0 0 0 33px; background:url(../images/header-phones-sep.png) no-repeat 12px top}
+.header-callback {float:right; width:140px; height:30px; background:#ffd200; text-decoration:none; color:#000; text-align:center; font:12px/30px MetaProBold, sans-serif; text-transform:uppercase}
+.header-phones-hint {font:12px/20px MetaProNormal, sans-serif; padding:5px 0 0 10px}
+
+nav {max-width:1280px; margin:0 auto; border-top:2px solid #000; position:relative; z-index:10}
+nav > ul {max-width:940px; margin:0 auto; padding:0; list-style:none; height:58px; position:relative; text-align:justify; counter-reset:point}
+nav > ul:after {content:""; display:inline-block; width:100%; height:0}
+nav > ul > li {display:inline-block; position:relative; margin:0; padding:0; vertical-align:top; font:15px/53px MetaProBold, sans-serif; text-transform:uppercase}
+nav > ul > li > a {text-decoration:none; display:block; height:53px; padding:5px 0 0 0}
+nav > ul > li:hover > a {padding:0; border-top:5px solid #667242}
+nav > ul > li > a:before {content:'0'counter(point); counter-increment:point 1; display:inline-block; vertical-align:top; font:12px/20px MetaProNormal, sans-serif; color:#667242; margin:9px 7px 0 0}
+
+.nav-sub {display:none; position:absolute; text-align:left; left:0; top:100%; border-top:3px solid #667242; width:940px; background:#fff; padding:29px 0 32px 0}
+nav > ul > li:hover .nav-sub {display:block}
+.nav-sub-sections {float:left; margin:0; padding:0 0 3px 0; list-style:none; width:510px; border-right:1px solid #2d2d2d; text-transform:none; font-size:0; line-height:0; letter-spacing:-1px}
+.nav-sub-sections li {display:inline-block; vertical-align:top; margin:0; font:15px/20px MetaProNormal, sans-serif; padding:22px 0 0 35px; letter-spacing:0; width:176px}
+.nav-sub-sections li:nth-child(1),
+.nav-sub-sections li:nth-child(2),
+.nav-sub-sections li:nth-child(3) {padding-top:0}
+.nav-sub-sections li:nth-child(3n-1) {width:102px}
+.nav-sub-sections li:nth-child(3n) {width:120px}
+.nav-sub-sections li a {text-decoration:none; color:#272727}
+.nav-sub-sections li a:before {content:""; display:inline-block; vertical-align:middle; width:6px; height:8px; background:url(../images/nav-sub.png); margin:0 9px 0 0}
+.nav-sub-links {float:left; margin:0 0 0 -1px; border-left:1px solid #2d2d2d; padding:0 0 0 54px; list-style:none; font:15px/20px MetaProMedium, sans-serif; text-transform:uppercase; text-align:left}
+.nav-sub-links li {margin:0; padding:22px 0 0 0}
+.nav-sub-links li:first-child {padding:0}
+.nav-sub-links li a {color:#272727; text-decoration:none}
+.nav-sub-links li span {display:inline-block; vertical-align:middle; line-height:0; margin:-4px 14px 0 0; width:20px; text-align:center}
+
+.birthday {height:92px; width:1280px; margin:0 auto 15px auto; background:#f7e669 url(../images/birthday.png); text-align:center; color:#405404}
+.birthday-title {text-transform:uppercase; font:24px/24px MetaProBold, sans-serif; padding:22px 0 0 0}
+.birthday-text {font:20px/20px MetaProNormal, sans-serif; padding:9px 0 0 0}
+
+.slider {max-width:1280px; margin:0 auto; height:460px; position:relative}
+.slider-content {position:relative}
+.slider-content ul {margin:0; padding:0; list-style:none; position:relative}
+.slider-content ul li {display:none; position:absolute; left:0; top:0; width:1280px; height:460px; overflow:hidden}
+.slider-content ul li:first-child {display:block}
+.slider-img {position:absolute}
+.slider-item {position:relative; padding:0 0 0 570px; width:460px; color:#fff}
+.slider-item-title {font:40px/40px MetaProBold, sans-serif; text-shadow:1px 1px 1px rgba(12, 10, 5, .45); padding:78px 0 0 0}
+.slider-item-text {font:20px/20px MetaProNormal, sans-serif; padding:21px 0 0 0}
+.slider-item-link {padding:43px 0 0 0}
+.slider-item-link a {display:block; width:300px; height:51px; background:#ffd200; text-align:center; text-transform:uppercase; text-decoration:none; font:15px/51px MetaProBold, sans-serif}
+.slider-menu {position:absolute; left:170px; top:80px; width:300px}
+.slider-menu ul {margin:0; padding:0; list-style:none}
+.slider-menu ul li {margin:0; padding:1px 0 0 0}
+.slider-menu ul li a {display:block; height:59px; background:#fff; text-decoration:none; font:12px/59px MetaProBold, sans-serif; text-transform:uppercase}
+.slider-menu ul li a:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.slider-menu-icon {float:left; width:59px; height:59px; text-align:center; background:#667242}
+.slider-menu ul li.active .slider-menu-icon {background:#d42d2d}
+.slider-menu-icon img {vertical-align:middle}
+.slider-menu-title {margin:0 0 0 68px}
+
+.best {width:940px; margin:0 auto}
+.best-title {text-align:center; text-transform:uppercase; font:20px/20px MetaProBold, sans-serif; padding:51px 0 0 0}
+.best-title:before {content:""; display:inline-block; width:45px; height:15px; background:#667242; margin:0 11px 0 0}
+.best-list {padding:0 0 60px 0}
+.best-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.best-item {float:left; width:220px; margin:0 0 0 20px}
+.best-item:first-child {margin:0}
+.best-item-img {text-align:center; height:230px; line-height:230px}
+.best-item-img img {vertical-align:middle}
+.best-item-title {text-transform:uppercase; font:15px/20px MetaProBold, sans-serif; border-top:3px solid #000; color:#272727; padding:20px 0 0 0; min-height:60px}
+.best-item-title a {text-decoration:none; color:#272727}
+.best-item-text {color:#272727; font-style:italic; min-height:80px}
+.best-item-link {padding:1px 0 0 0}
+.best-item-link a {display:block; height:39px; font:12px/39px MetaProBold, sans-serif; text-align:center; text-transform:uppercase; text-decoration:none; color:#272727; background:#ffd200}
+
+.main {background:#f1f1f1; width:900px; margin:0 auto; padding:0 170px 59px 170px}
+.main:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.main-about {float:left; width:420px}
+.main-title {text-transform:uppercase; font:20px/20px MetaProBold, sans-serif; padding:52px 0 0 0}
+.main-title:before {content:""; display:inline-block; width:45px; height:15px; background:#667242; margin:0 11px 0 0}
+.main-about-text {padding:19px 0 0 0}
+.main-about-text p {margin:0; padding:20px 0 0 0}
+.main-news {float:right; width:420px}
+.main-news-list {padding:10px 0 0 0}
+.main-news-item {border-top:1px solid #cdcdcd; padding:29px 0}
+.main-news-item:first-child {border-top:none}
+.main-news-item-name {text-transform:uppercase; font:15px/20px MetaProBold, sans-serif}
+.main-news-item-name a {text-decoration:none}
+.main-news-item-anonce {padding:10px 0 0 0}
+.main-news-item-date {font-style:italic; color:#667242; padding:10px 0 0 0}
+.main-news-all {padding:22px 0 0 0}
+.main-news-all a {display:block; text-decoration:none; font:12px/35px MetaProBold, sans-serif; width:135px; height:35px; border:2px solid #667242; color:#272727; text-align:center; text-transform:uppercase}
+
+.social {width:940px; margin:0 auto; padding:56px 0 52px 0}
+.social:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.social-title {float:left; text-transform:uppercase; font:20px/30px MetaProBold, sans-serif; padding:0 20px 0 0}
+.social-title:before {content:""; display:inline-block; width:45px; height:15px; background:#667242; margin:0 11px 0 0}
+.social-vk,
+.social-fb,
+.social-tw {float:left; width:30px; height:30px; margin:0 3px 0 0; background:url(../images/social.png)}
+.social-vk {background-position:left top}
+.social-fb {background-position:-30px top}
+.social-tw {background-position:-60px top}
+.social-likes {float:right; padding:5px 0 0 0}
+
+footer {border-top:2px solid #000; padding:0 0 21px 250px; width:1030px; margin:0 auto; background:url(../images/footer.png) no-repeat 150px bottom}
+footer:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.footer-contacts {float:left; width:300px}
+.footer-contacts-title {font:14px/20px MetaProBold, sans-serif; color:#667242; padding:29px 0 0 0}
+.footer-contacts-office {font:14px/20px MetaProBold, sans-serif; padding:20px 0 0 0}
+.footer-contacts-address {font:14px/20px MetaProNormal, sans-serif}
+.footer-contacts-phone {font:14px/20px MetaProNormal, sans-serif; padding:10px 0 0 0}
+.footer-contacts-email {font:14px/20px MetaProNormal, sans-serif; color:#667242; padding:10px 0 0 0}
+.footer-contacts-email a {color:#667242; text-decoration:none}
+footer .logo-2 {padding:32px 0 0 104px}
+.footer-menu {float:right; width:390px; font:14px/20px MetaProNormal, sans-serif; padding:19px 0 0 0}
+.footer-menu ul {margin:0; padding:0; list-style:none}
+.footer-menu ul li {margin:0; padding:10px 0 0 0}
+.footer-menu ul li a {color:#546034}
