@@ -344,8 +344,27 @@ footer .logo-2 {padding:32px 0 0 104px}
 .detail-photo-preview ul li.active {border:3px solid #ffd200; padding:5px}
 .detail-photo-preview ul li a {display:block; width:76px; height:57px; position:relative; overflow:hidden}
 
-.detail-info {float:right; width:220px}
+.detail-info {float:right; width:220px; margin:-5px 0 0 0}
 .detail-info dl {color:#363636; margin:0; padding:0}
 .detail-info dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .detail-info dt {float:left; clear:left; width:70px; margin:0; padding:0 0 20px 0}
 .detail-info dd {margin-left:70px; font-weight:bold; margin:0; padding:0 0 20px 0}
+
+.detail-order {margin:0; padding:0}
+.detail-color {border-bottom:1px solid #c0c0c0}
+.detail-color:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-color-title {float:left; width:70px}
+.detail-color-list {margin:0 0 0 70px; line-height:0}
+.detail-color-item {float:left; margin:-14px 0 14px 0; width:34px; height:34px; padding:7px; cursor:pointer; position:relative; overflow:hidden}
+.detail-color-item.checked {padding:4px; border:3px solid #ffd200}
+.detail-color-item input {position:absolute; left:-99px; top:-99px}
+.detail-count {padding:26px 0 0 0}
+.detail-count:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-count-dec {float:left; width:39px; height:39px; background:#667242 url(../images/detail-count-dec.png) no-repeat center}
+.detail-count-dec:hover {background-color:#808f52}
+.detail-count-dec:active {background-color:#4d5632}
+.detail-count input {float:left; margin:0 4px; vertical-align:top; padding:0; outline:none; width:54px; height:37px; background:#fff; border:1px solid #5f5f5f; text-align:center; color:#363636; font:600 14px/37px "Open Sans", sans-serif}
+.detail-count-inc {float:left; width:39px; height:39px; background:#667242 url(../images/detail-count-inc.png) no-repeat center}
+.detail-count-inc:hover {background-color:#808f52}
+.detail-count-inc:active {background-color:#4d5632}
+.detail-submit {width:142px; padding:13px 0 0 0}

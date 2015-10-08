@@ -4,12 +4,14 @@
         <meta charset="utf-8" />
         <title>ОборонМебель</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600italic,700,700italic&subset=latin,cyrillic" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic&subset=latin,cyrillic" />
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
 
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=1280" />
@@ -200,6 +202,23 @@
                                     <dt>Размер:</dt>
                                     <dd>1960х1400х360 мм</dd>
                                 </dl>
+
+                                <form action="#" method="post" class="detail-order">
+                                    <div class="detail-color">
+                                        <div class="detail-color-title">Цвет:</div>
+                                        <div class="detail-color-list">
+                                            <div class="detail-color-item"><input type="radio" name="color" value="1" checked="checked" /><img src="files/detail-color-1.jpg" alt="" width="34" height="34" /></div>
+                                            <div class="detail-color-item"><input type="radio" name="color" value="2" /><img src="files/detail-color-2.jpg" alt="" width="34" height="34" /></div>
+                                            <div class="detail-color-item"><input type="radio" name="color" value="3" /><img src="files/detail-color-3.jpg" alt="" width="34" height="34" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-count">
+                                        <a href="#" class="detail-count-dec"></a>
+                                        <input type="text" name="count" value="156" />
+                                        <a href="#" class="detail-count-inc"></a>
+                                    </div>
+                                    <div class="detail-submit"><input type="submit" value="заказать" class="btn-order" /></div>
+                                </form>
                             </div>
                             <!-- detail info END -->
 
