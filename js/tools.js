@@ -94,6 +94,45 @@
             e.preventDefault();
         });
 
+        $('.catalogue-ctrl-count-select-value').click(function(e) {
+            $('.catalogue-ctrl-count-select.open').removeClass('open');
+            $(this).parent().addClass('open');
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.catalogue-ctrl-count-select').length == 0) {
+                $('.catalogue-ctrl-count-select.open').removeClass('open');
+            }
+        });
+
+        $('.filter-ctrl').click(function(e) {
+            var curLink = $(this);
+            var curText = curLink.html();
+            curLink.html(curLink.attr('rel'));
+            curLink.attr('rel', curText);
+            curLink.toggleClass('active');
+
+            $('.filter').toggleClass('active');
+
+            e.preventDefault();
+        });
+
+        $('.filter-type-item input:checked').parent().addClass('checked');
+        $('.filter-type-item').click(function() {
+            $(this).toggleClass('checked');
+            $(this).find('input').prop('checked', $(this).hasClass('checked')).trigger('change');
+        });
+
+        $('.filter-reset').click(function() {
+            window.setTimeout(function() {
+                $('.filter .detail-color-item.checked').removeClass('checked');
+                $('.filter .detail-color-item input:checked').parent().addClass('checked');
+                $('.filter-type-item.checked').removeClass('checked');
+                $('.filter-type-item input:checked').parent().addClass('checked');
+            }, 100);
+        });
+
     });
 
 })(jQuery);
