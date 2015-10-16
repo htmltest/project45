@@ -10,7 +10,7 @@ a {color:#000; outline:none}
 img {border:none}
 
 p {margin:20px 0; padding:0}
-h1 {font:33px/33px MetaProMedium, sans-serif; color:#2b2b2b; margin:33px 0; padding:0}
+h1 {font:33px/39px MetaProMedium, sans-serif; color:#2b2b2b; margin:33px 0; padding:0}
 h2 {font:20px/20px MetaProBold, sans-serif; margin:64px 0 20px 0; padding:0; text-transform:uppercase}
 h3 {font:15px/20px MetaProBold, sans-serif; margin:20px 0; padding:0; text-transform:uppercase}
 h4 {font-weight:bold; font-size:14px; line-height:20px; margin:20px 0; padding:0; color:#303030}
@@ -493,3 +493,14 @@ footer .logo-2 {padding:32px 0 0 104px}
 .basket-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .basket-summ {float:left; line-height:39px; color:#272727}
 .basket-btn {float:right; width:192px; margin:0 0 0 14px}
+
+.contacts-rows {margin:0 0 0 -25px}
+.contacts-rows-inner {display:table; width:100%}
+.contacts-item {display:table-cell; vertical-align:top; width:33.33%; padding:0 0 0 25px}
+.contacts-item-top {height:45px; background:#ebebeb; font-size:15px; line-height:45px; font-weight:600; padding:0 0 0 70px; position:relative}
+.contacts-item-top-icon {position:absolute; left:0; top:0; width:45px; height:45px; text-align:center; background:#555}
+.contacts-item-top-icon img {vertical-align:middle}
+.contacts-item-text {line-height:18px; color:#222; padding:21px 0 0 0}
+
+.contacts-map {padding:25px 0 0 0}
+#map {height:420px}
