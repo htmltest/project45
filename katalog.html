@@ -12,6 +12,7 @@
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="js/modernizr.custom.90364.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=1280" />
@@ -162,10 +163,41 @@
                     <div class="catalogue-side-best">
                         <div class="catalogue-side-best-title">Лучшее предложение</div>
                         <div class="best-item">
-                            <div class="best-item-img"><a href="#"><img src="files/best-3.jpg" alt="" width="179" height="162" /></a></div>
-                            <div class="best-item-title"><a href="#">СТОЛ ДЛЯ ЧИСТКИ<br />ОРУЖИЯ</a></div>
+                            <div class="best-item-img"><img src="files/best-3.jpg" alt="" width="179" height="162" /></div>
+                            <div class="best-item-title">СТОЛ ДЛЯ ЧИСТКИ<br />ОРУЖИЯ</div>
                             <div class="best-item-text">900х2550х620 мм<br />арт. ВМ 171 ПКП</div>
-                            <div class="best-item-link"><a href="#" class="btn-order">ЗАказать</a></div>
+                            <div class="best-item-link"><div class="btn-order">ЗАказать</div></div>
+                            <div class="best-item-detail">
+                                <div class="best-item-detail-photos">
+                                    <div class="best-item-detail-photo-big"><img src="files/best-item-detail-big-1.jpg" alt="" /></div>
+                                    <div class="best-item-detail-photo-preview">
+                                        <a href="files/best-item-detail-big-1.jpg"><img src="files/best-item-detail-preview.jpg" alt="" width="58" height="48" /></a>
+                                        <a href="files/best-item-detail-big-2.jpg"><img src="files/best-item-detail-preview.jpg" alt="" width="58" height="48" /></a>
+                                        <a href="files/best-item-detail-big-3.jpg"><img src="files/best-item-detail-preview.jpg" alt="" width="58" height="48" /></a>
+                                    </div>
+                                </div>
+                                <div class="best-item-detail-title"><a href="#">Шкаф для личных вещей ШЛ70</a></div>
+                                <div class="best-item-detail-text">
+                                    <dl>
+                                        <dt>Артикул:</dt>
+                                        <dd>5М 123БК</dd>
+
+                                        <dt>Размер:</dt>
+                                        <dd>1960х1400х360 мм</dd>
+
+                                        <dt>Цвет:</dt>
+                                        <dd>Ольха</dd>
+                                    </dl>
+                                </div>
+                                <form action="windows/basket.html" method="post" class="best-item-detail-ctrl">
+                                    <div class="detail-count">
+                                        <a href="#" class="detail-count-dec"></a>
+                                        <input type="text" name="count" value="156" />
+                                        <a href="#" class="detail-count-inc"></a>
+                                    </div>
+                                    <div class="best-item-detail-buy"><input type="submit" class="btn-order" value="заказать" /></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <!-- catalogue side best END -->

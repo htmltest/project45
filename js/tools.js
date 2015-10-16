@@ -133,6 +133,123 @@
             }, 100);
         });
 
+        if (!Modernizr.touch) {
+            $('body').addClass('hoverable');
+        } else {
+            $('.best-item').click(function() {
+                $('.best-item.open').removeClass('open');
+                $(this).addClass('open');
+            });
+
+            $(document).click(function(e) {
+                if ($(e.target).parents().filter('.best-item').length == 0) {
+                    $('.best-item.open').removeClass('open');
+                }
+            });
+        }
+
+        $('.best-item-detail-photo-preview a').click(function(e) {
+            var curBlock = $(this).parents().filter('.best-item-detail-photos');
+            curBlock.find('.best-item-detail-photo-big img').attr('src', $(this).attr('href'));
+            e.preventDefault();
+        });
+
+        $('.best-item-detail-ctrl, .detail-order').submit(function(e) {
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                dataType: 'html',
+                cache: false
+            }).done(function(html) {
+                if ($('.window').length > 0) {
+                    windowClose();
+                }
+                windowOpen(html);
+            });
+            e.preventDefault();
+        });
+
     });
+
+    function windowOpen(contentWindow) {
+        var windowWidth     = $(window).width();
+        var windowHeight    = $(window).height();
+        var curScrollTop    = $(window).scrollTop();
+
+        var bodyWidth = $('body').width();
+        $('body').css({'height': windowHeight, 'overflow': 'hidden'});
+        var scrollWidth =  $('body').width() - bodyWidth;
+        $('body').css({'padding-right': scrollWidth + 'px'});
+        $(window).scrollTop(0);
+        $('.top').css({'margin-top': -curScrollTop});
+        $('.top').data('scrollTop', curScrollTop);
+
+        $('body').append('<div class="window"><div class="window-overlay"></div><div class="window-loading"></div><div class="window-container window-container-load"><div class="window-content">' + contentWindow + '<a href="#" class="window-close"></a></div></div></div>')
+
+        if ($('.window-container img').length > 0) {
+            $('.window-container img').each(function() {
+                $(this).attr('src', $(this).attr('src'));
+            });
+            $('.window-container').data('curImg', 0);
+            $('.window-container img').load(function() {
+                var curImg = $('.window-container').data('curImg');
+                curImg++;
+                $('.window-container').data('curImg', curImg);
+                if ($('.window-container img').length == curImg) {
+                    $('.window-loading').remove();
+                    $('.window-container').removeClass('window-container-load');
+                    windowPosition();
+                }
+            });
+        } else {
+            $('.window-loading').remove();
+            $('.window-container').removeClass('window-container-load');
+            windowPosition();
+        }
+
+        $('.window-overlay').click(function() {
+            windowClose();
+        });
+
+        $('.window-close, .window-close-bottom').click(function(e) {
+            windowClose();
+            e.preventDefault();
+        });
+
+        $('body').bind('keyup', keyUpBody);
+    }
+
+    function windowPosition() {
+        var windowWidth     = $(window).width();
+        var windowHeight    = $(window).height();
+
+        if ($('.window-container').width() > windowWidth - 110) {
+            $('.window-container').css({'margin-left': 55, 'left': 'auto'});
+            $('.window-overlay').width($('.window-container').width() + 110);
+        } else {
+            $('.window-container').css({'margin-left': -$('.window-container').width() / 2});
+        }
+
+        if ($('.window-container').height() > windowHeight - 80) {
+            $('.window-overlay').height($('.window-container').height() + 80);
+        } else {
+            $('.window-container').css({'margin-top': -$('.window-container').height() / 2});
+        }
+    }
+
+    function keyUpBody(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    }
+
+    function windowClose() {
+        $('body').unbind('keyup', keyUpBody);
+        $('.window').remove();
+        $('.top').css({'margin-top': '0'});
+        $('body').css({'height': 'auto', 'overflow': 'visible', 'padding-right': 0});
+        $(window).scrollTop($('.top').data('scrollTop'));
+    }
 
 })(jQuery);
