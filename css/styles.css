@@ -488,7 +488,8 @@ footer .logo-2 {padding:32px 0 0 104px}
 .basket-descr {font-style:italic}
 .basket-info {display:table-cell; vertical-align:middle; padding:20px 10px 20px 0; border-bottom:1px solid #b7b7b7; white-space:nowrap}
 .basket-color {display:table-cell; vertical-align:middle; line-height:0; padding:20px 10px 20px 0; border-bottom:1px solid #b7b7b7}
-.basket-count {display:table-cell; text-align:right; vertical-align:middle; padding:20px 0; border-bottom:1px solid #b7b7b7; white-space:nowrap}
+.basket-count {display:table-cell; vertical-align:middle; padding:20px 0; border-bottom:1px solid #b7b7b7}
+.basket-count .detail-count {padding:0}
 .basket-ctrl {padding:22px 0 0 0}
 .basket-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .basket-summ {float:left; line-height:39px; color:#272727}
