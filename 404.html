@@ -112,99 +112,18 @@
         <!-- content -->
         <div class="content">
 
-            <div class="breadcrumbs">
-                <a href="#">ОборнМебель</a> <span></span>
-                Контакты
-            </div>
-
-            <h1>Акционерное общество<br />«1470 Управление материально-технического обеспечения»</h1>
-
-            <div class="contacts-rows">
-                <div class="contacts-rows-inner">
-                    <div class="contacts-item">
-                        <div class="contacts-item-top">
-                            <div class="contacts-item-top-icon"><img src="images/contacts-phone.png" alt="" width="11" height="11" /></div>
-                            +7 (495) 442-12-50
-                        </div>
-                        <div class="contacts-item-text">Менеджеры с радостью предоставят вам полную информацию о нашей продукции.</div>
-                    </div>
-                    <div class="contacts-item">
-                        <div class="contacts-item-top">
-                            <div class="contacts-item-top-icon"><img src="images/contacts-email.png" alt="" width="13" height="12" /></div>
-                            info@oboronmebel.ru
-                        </div>
-                        <div class="contacts-item-text">Вы можете задать любые интересующие вас вопросы, мы с радостью ответим вам.</div>
-                    </div>
-                    <div class="contacts-item">
-                        <div class="contacts-item-top">
-                            <div class="contacts-item-top-icon"><img src="images/contacts-address.png" alt="" width="10" height="14" /></div>
-                            Очаковское шоссе, д. 3А
-                        </div>
-                        <div class="contacts-item-text">Наш офис работает с 10.00 до 18.00 с&nbsp;понедельника по субботу.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- contacts map -->
-            <div class="contacts-map">
-                <div id="map"></div>
-                <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
-                <script type="text/javascript"><!--
-                    var map;
-
-                    $(window).load(function() {
-                        var geocoder;
-                        geocoder = new google.maps.Geocoder();
-                        var myLatlng = new google.maps.LatLng(55.701098, 37.618046);
-                        var myOptions = {
-                            zoom: 17,
-                            center: myLatlng,
-                            mapTypeControl: false,
-                            panControl: true,
-                            zoomControl: true,
-                            zoomControlOptions: {
-                                style: google.maps.ZoomControlStyle.DEFAULT
-                            },
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        };
-                        map = new google.maps.Map(document.getElementById('map'), myOptions);
-                        var address = 'г. Москва, Очаковское шоссе, д. 3А';
-                        geocoder.geocode({'address': address}, function(results, status) {
-                            if (status == google.maps.GeocoderStatus.OK) {
-                                map.setCenter(results[0].geometry.location);
-                                myLatlng_recalc = results[0].geometry.location;
-
-                                var marker = new google.maps.Marker({
-                                    map: map,
-                                    position: results[0].geometry.location
-                                });
-                            }
-                        });
-                    });
-                //--></script>
-            </div>
-            <!-- contacts map END -->
+            <div class="page-404-image"><img src="images/404.jpg" alt="" width="602" height="263" /></div>
+            <div class="page-404-text">ошибка. запрашиваемая страница не найдена</div>
 
         </div>
         <!-- content END -->
 
         <!-- social -->
-        <div class="social">
+        <div class="social social-404">
             <div class="social-title">Присоединяйтесь к нам</div>
             <a href="#" class="social-vk"></a>
             <a href="#" class="social-fb"></a>
             <a href="#" class="social-tw"></a>
-            <div class="social-likes">
-                <script src="//yandex.st/share/share.js"></script>
-                <span id="ya_share_counter"></span>
-                <script>
-                    var yaShareCounter = new Ya.share({
-                        'element': 'ya_share_counter',
-                        'elementStyle': {'quickServices':  ['vkontakte', 'facebook', 'twitter', 'gplus'], 'type': 'small'},
-                        'theme': 'counter'
-                     });
-                </script>
-            </div>
         </div>
         <!-- social END -->
 

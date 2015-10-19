@@ -1,0 +1,40 @@
+.top,
+nav,
+.header-callback,
+.social,
+.footer-menu,
+.breadcrumbs,
+form,
+.basket-btn,
+.main-news-all,
+.btn-order,
+.btn-cancel,
+.slider,
+.catalogue-side,
+.catalogue-block-item-photo:after,
+.detail-photo-preview,
+.filter-ctrl,
+.filter.active,
+.catalogue-ctrl,
+.detail-photo-big a:after {display:none}
+
+a {text-decoration:none}
+
+.header-phones {width:auto; text-align:right; padding:23px 0 0 0}
+.header-phones-content {float:none; width:auto; height:auto; background:none; font-size:14px; line-height:25px}
+.header-phones-item {float:none; padding:0}
+.header-phones-item+.header-phones-item {padding:0; background:none}
+.header-phones-hint {font-size:13px; padding:0}
+
+footer {background:none; text-align:right; max-width:940px; width:auto; padding-left:170px; padding-right:170px; margin-top:52px}
+
+.footer-contacts {text-align:left}
+.footer-contacts-title {color:#000}
+.footer-contacts-address {font-weight:normal}
+footer .logo-2,
+footer .logo-3 {float:none; display:inline-block; vertical-align:top}
+
+.contacts-item-top-icon:before {content:""; display:block; width:45px; height:0; position:absolute; left:0; top:0; border-top:45px solid #000}
+.contacts-item-top-icon img {position:relative}
+
+.catalogue-container {margin:0}

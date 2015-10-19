@@ -505,3 +505,12 @@ footer .logo-2 {padding:32px 0 0 104px}
 
 .contacts-map {padding:25px 0 0 0}
 #map {height:420px}
+
+.page-404-image {text-align:center; line-height:0; padding:125px 0 0 0}
+.page-404-text {font:24px/24px MetaProBold, sans-serif; text-transform:uppercase; text-align:center; padding:57px 0 92px 0}
+
+.social-404 {text-align:center}
+.social-404 .social-title {display:inline-block; vertical-align:middle; float:none}
+.social-404 .social-vk,
+.social-404 .social-fb,
+.social-404 .social-tw {display:inline-block; vertical-align:middle; float:none}
