@@ -4,6 +4,8 @@
 @font-face {font-family:"MetaProBold"; src:url("../fonts/metapro-bold-webfont.woff") format("woff"); font-weight:normal; font-style:normal}
 
 body {min-width:320px; margin:0; padding:0; font:14px/20px "Open Sans", sans-serif; color:#000; background:#fff}
+body.open-menu-mobile {height:100%; overflow:hidden}
+body.open-menu-mobile:after {content:""; display:block; width:100%; height:100%; position:fixed; left:0; top:0; z-index:10; background:rgba(255, 255, 255, .5)}
 
 a {color:#000; outline:none}
 
@@ -98,7 +100,7 @@ blockquote {margin:20px 0; padding:29px 63px 27px 63px; background:#f5f5f5; colo
 
     .top-menu-mobile {display:block; float:left; padding:14px 0 0 0}
     .top-menu-mobile-link {display:block; height:17px; padding:0 0 0 32px; text-decoration:none; color:#fff; font:12px/20px MetaProBold, sans-serif; background:url(../images/menu-mobile.png) no-repeat; text-transform:uppercase}
-    .top-menu-mobile-content {display:none; z-index:21; position:fixed; left:0; top:44px; background:#667242; width:244px}
+    .top-menu-mobile-content {display:none; z-index:21; position:fixed; left:0; top:44px; background:#667242; width:244px; max-height:100%; overflow:auto}
     .top-menu-mobile.open .top-menu-mobile-content {display:block}
     .top-menu-mobile-nav {margin:0; padding:0; list-style:none; border-bottom:1px solid #a3aa8e}
     .top-menu-mobile-nav > li {margin:0; padding:0; border-top:1px solid #a3aa8e}
@@ -109,9 +111,11 @@ blockquote {margin:20px 0; padding:29px 63px 27px 63px; background:#f5f5f5; colo
     .top-menu-mobile-nav > li > ul {display:none; margin:0; padding:8px 20px 12px 20px; list-style:none; font:15px/20px MetaProBook, sans-serif}
     .top-menu-mobile-nav > li.open > ul {display:block}
     .top-menu-mobile-nav > li > ul li {margin:0; padding:3px 0}
+    .top-menu-mobile-nav > li > ul li:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
     .top-menu-mobile-nav > li > ul li:before {display:none}
     .top-menu-mobile-nav > li > ul a {text-decoration:none; color:#fff}
     .top-menu-mobile-nav > li > ul a:hover {text-decoration:underline}
+    .top-menu-mobile-nav > li > ul a span {float:left; width:20px; padding:0 14px 0 0; text-align:center}
     .top-menu-mobile-add {margin:0; padding:8px 20px 12px 20px; list-style:none; font:15px/20px MetaProBook, sans-serif}
     .top-menu-mobile-add li {margin:0; padding:6px 0}
     .top-menu-mobile-add li:before {display:none}
@@ -283,6 +287,23 @@ nav > ul > li:hover .nav-sub {top:100%}
     .best-item {text-align:left; margin:0 10px}
 }
 
+@media (max-width:480px) {
+    .best-list-mobile {position:relative; width:100%; position:relative; overflow:hidden; white-space:nowrap; text-align:left; padding:14px 0 52px 0}
+    .best-item {margin:0 auto; display:inline-block; width:100%}
+    .best-item-img,
+    .best-item-title,
+    .best-item-text,
+    .best-item-link {width:220px; margin:0 auto}
+    .best-list-prev,
+    .best-list-next {display:block; width:20px; height:22px; position:absolute; top:104px; background:url(../images/mobile-arrows.png)}
+    .best-list-prev {left:15px; background-position:left top}
+    .best-list-prev:hover {background-position:left -22px}
+    .best-list-prev:active {background-position:left -44px}
+    .best-list-next {right:15px; background-position:-20px top}
+    .best-list-next:hover {background-position:-20px -22px}
+    .best-list-next:active {background-position:-20px -44px}
+}
+
 .best-item-detail {display:none; position:absolute; left:50%; top:0; width:261px; padding:18px 37px 40px 37px; margin:0 0 0 -169px; background:#fff; border:1px solid #cdcdcd; z-index:9; box-shadow:4px 4px 18px rgba(68, 68, 67, .32)}
 .hoverable .best-item:hover .best-item-detail,
 .best-item.open .best-item-detail {display:block}
@@ -336,8 +357,20 @@ h1+.main-title {padding:0}
     .main-about {float:none; width:auto}
     .main-title {padding-top:30px}
     .main-title:before {display:none}
-    .main-news {float:none; width:auto; border-top:1px solid #303030; margin:30px -15px 0 -15px; padding-left:15px; padding-right:15px}
+    .main-news {float:none; width:auto; border-top:1px solid #303030; margin:30px -15px 0 -15px}
+    .main-news .main-title {padding-left:45px}
     .main-news-all a  {margin:0 auto}
+    .main-news-list {position:relative; margin:10px 0 0 0; padding:0 45px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+    .main-news-content {position:relative; width:100%; overflow:hidden}
+    .main-news-item {display:inline-block; vertical-align:top; width:100%; font-size:14px; line-height:20px; letter-spacing:0; white-space:normal; border:none}
+    .main-news-prev,
+    .main-news-next {display:block; width:20px; height:22px; position:absolute; top:50%; margin-top:-11px; background:url(../images/mobile-arrows.png)}
+    .main-news-prev {left:15px; background-position:left top}
+    .main-news-prev:hover {background-position:left -22px}
+    .main-news-prev:active {background-position:left -44px}
+    .main-news-next {right:15px; background-position:-20px top}
+    .main-news-next:hover {background-position:-20px -22px}
+    .main-news-next:active {background-position:-20px -44px}
 }
 
 .social {max-width:940px; margin:0 auto; padding:56px 0 52px 0}
