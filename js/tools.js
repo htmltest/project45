@@ -143,6 +143,7 @@ var sliderTimer     = null;
                 curValue = 1;
                 curInput.val('1');
             }
+            recalcBasket();
         });
 
         $('.detail-count-dec').click(function(e) {
@@ -153,6 +154,7 @@ var sliderTimer     = null;
                 curValue = 1;
             }
             curInput.val(curValue);
+            recalcBasket();
 
             e.preventDefault();
         });
@@ -162,9 +164,18 @@ var sliderTimer     = null;
             var curValue = Number(curInput.val());
             curValue++;
             curInput.val(curValue);
+            recalcBasket();
 
             e.preventDefault();
         });
+
+        function recalcBasket() {
+            var curSumm = 0;
+            $('.basket-count input').each(function() {
+                curSumm += Number($(this).val());
+            });
+            $('.basket-summ span').html(curSumm);
+        }
 
         $('.catalogue-ctrl-count-select-value').click(function(e) {
             $('.catalogue-ctrl-count-select.open').removeClass('open');
@@ -248,7 +259,7 @@ var sliderTimer     = null;
         });
 
         $('.top-menu-mobile-nav > li > a').click(function(e) {
-            if ($(this).find('span')) {
+            if ($(this).find('span').length > 0) {
                 $(this).parent().toggleClass('open');
                 e.preventDefault();
             }
@@ -279,10 +290,24 @@ var sliderTimer     = null;
             e.preventDefault();
         })
 
+        $('.content-crop-open').click(function(e) {
+            $(this).parent().toggleClass('open');
+            e.preventDefault();
+        });
+
     });
 
     $(window).bind('load resize', function() {
         $('.catalogue-block-list a:first').stop(true, true).removeAttr('style');
+
+        $('.content-crop').each(function() {
+            var curBlock = $(this);
+            if (curBlock.find('.content-crop-inner').height() > curBlock.height()) {
+                curBlock.addClass('active');
+            } else {
+                curBlock.removeClass('active');
+            }
+        });
     });
 
     function windowOpen(contentWindow) {

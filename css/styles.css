@@ -183,9 +183,9 @@ nav > ul > li > a {text-decoration:none; display:block; height:53px; padding:5px
 nav > ul > li:hover > a {padding:0; border-top:5px solid #667242}
 nav > ul > li > a:before {content:'0'counter(point); counter-increment:point 1; display:inline-block; vertical-align:top; font:12px/20px MetaProNormal, sans-serif; color:#667242; margin:9px 7px 0 0}
 
-.nav-sub {display:none; position:absolute; text-align:left; left:0; top:100%; border-top:3px solid #667242; width:940px; background:#fff; padding:29px 0 32px 0}
-nav > ul > li:hover .nav-sub {display:block}
-.nav-sub-sections {float:left; margin:0; padding:0 0 3px 0; list-style:none; width:510px; border-right:1px solid #2d2d2d; text-transform:none; font-size:0; line-height:0; letter-spacing:-1px}
+.nav-sub {position:absolute; text-align:left; left:0; top:-9999px; border-top:3px solid #667242; width:940px; background:#fff; padding:29px 0 32px 0; transition:top 0s ease .1s; border:1px solid #b7b7b7; border-top:none}
+nav > ul > li:hover .nav-sub {top:100%}
+.nav-sub-sections {float:left; margin:0 0 0 -1px; padding:0 0 3px 0; list-style:none; width:510px; border-left:1px solid #2d2d2d; text-transform:none; font-size:0; line-height:0; letter-spacing:-1px}
 .nav-sub-sections li {display:inline-block; vertical-align:top; margin:0; font:15px/20px MetaProNormal, sans-serif; padding:22px 0 0 35px; letter-spacing:0; width:176px}
 .nav-sub-sections li:before {display:none}
 .nav-sub-sections li:nth-child(1),
@@ -195,7 +195,7 @@ nav > ul > li:hover .nav-sub {display:block}
 .nav-sub-sections li:nth-child(3n) {width:120px}
 .nav-sub-sections li a {text-decoration:none; color:#272727}
 .nav-sub-sections li a:before {content:""; display:inline-block; vertical-align:middle; width:6px; height:8px; background:url(../images/nav-sub.png); margin:0 9px 0 0}
-.nav-sub-links {float:left; margin:0 0 0 -1px; border-left:1px solid #2d2d2d; padding:0 0 0 54px; list-style:none; font:15px/20px MetaProMedium, sans-serif; text-transform:uppercase; text-align:left}
+.nav-sub-links {float:left; margin:0; border-right:1px solid #2d2d2d; padding:0 19px 0 35px; list-style:none; font:15px/20px MetaProMedium, sans-serif; text-transform:uppercase; text-align:left}
 .nav-sub-links li {margin:0; padding:22px 0 0 0}
 .nav-sub-links li:first-child {padding:0}
 .nav-sub-links li:before {display:none}
@@ -243,7 +243,7 @@ nav > ul > li:hover .nav-sub {display:block}
 .slider-menu-icon img {vertical-align:middle}
 .slider-menu-title {margin:0 0 0 68px}
 .slider-ctrl {position:absolute; left:0; bottom:10px; width:100%; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; z-index:3}
-.slider-ctrl a {display:inline-block; vertical-align:middle; width:8px; height:8px; border:1px solid #fff; border-radius:5px; background:transparent; margin:0 5px}
+.slider-ctrl a {display:inline-block; vertical-align:middle; width:12px; height:12px; border:1px solid #fff; border-radius:7px; background:transparent; margin:0 7px}
 .slider-ctrl a:hover {border-color:#ffd200}
 .slider-ctrl a.active {background:#ffd200; border-color:#ffd200}
 
@@ -261,6 +261,7 @@ nav > ul > li:hover .nav-sub {display:block}
     .slider-menu-icon {width:41px; height:41px}
     .slider-menu-title {margin:0 0 0 54px}
     .slider-ctrl {bottom:244px}
+    .slider-ctrl a {width:8px; height:8px; border-radius:5px; margin:0 5px}
 }
 
 .best {max-width:940px; margin:0 auto}
@@ -377,6 +378,7 @@ footer .logo-2 {padding:32px 0 0 104px}
 .footer-menu ul li {margin:0; padding:10px 0 0 0}
 .footer-menu ul li:before {display:none}
 .footer-menu ul li a {color:#546034}
+.footer-menu ul li a:hover {text-decoration:none}
 
 @media (max-width:1280px) {
     footer {border:none; padding:0 0 21px 0; background-position:214px bottom}
@@ -473,11 +475,14 @@ footer .logo-2 {padding:32px 0 0 104px}
 .catalogue-menu > ul > li:before {display:none}
 .catalogue-menu > ul > li > a {display:block; text-decoration:none; color:#000; background:#fff; font:12px/44px MetaProBold, sans-serif; text-transform:uppercase; height:42px; padding:0 0 0 53px}
 .catalogue-menu > ul > li > a .catalogue-menu-icon {position:absolute; left:-1px; top:-1px; width:42px; height:42px; background:#667242; text-align:center; border:1px solid #525b35; line-height:42px}
+.catalogue-menu > ul > li.download > a .catalogue-menu-icon {background:#d42d2d}
 .catalogue-menu > ul > li > a .catalogue-menu-icon img {vertical-align:middle}
 .catalogue-menu > ul > li.active > a,
 .catalogue-menu > ul > li > a:hover {position:relative; z-index:2; background:#667242; color:#fff; border-top:1px solid #525b35; border-bottom:1px solid #525b35; margin:-1px 0}
+.catalogue-menu > ul > li.download > a:hover {background:#d42d2d}
 .catalogue-menu > ul > li.active > a .catalogue-menu-icon,
 .catalogue-menu > ul > li > a:hover .catalogue-menu-icon {border-right-color:#667242}
+.catalogue-menu > ul > li.download > a:hover .catalogue-menu-icon {border-right-color:#d42d2d}
 .catalogue-menu > ul > li > ul {display:none; margin:0; padding:0; list-style:none; background:#e9e9e9; font:14px/18px MetaProBook, sans-serif}
 .catalogue-menu > ul > li.active > ul {display:block}
 .catalogue-menu > ul > li > ul > li {margin:0; padding:0; border-top:1px solid #bebebe}
@@ -719,11 +724,11 @@ footer .logo-2 {padding:32px 0 0 104px}
     .basket-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
     .basket-del {position:absolute; right:0; top:19px; padding:0; border:none; width:auto}
     .basket-preview {float:left; width:99px; display:block; padding:10px 0 0 0; border:none}
-    .basket-text {display:block; margin:0 0 0 99px; border:none; padding:18px 0 0 0}
+    .basket-text {display:block; margin:0 25px 0 109px; border:none; padding:18px 0 0 0}
     .basket-descr {display:none}
-    .basket-info  {display:block; margin:0 0 0 99px; border:none; padding:8px 0 0 0}
-    .basket-color {float:left; display:block; margin:0 0 0 99px; border:none; padding:15px 0 0 0}
-    .basket-count {float:left; display:block; border:none; padding:13px 0 0 15px}
+    .basket-info  {display:block; margin:0 0 0 109px; border:none; padding:8px 0 0 0}
+    .basket-color {float:left; display:block; margin:0 0 0 109px; border:none; padding:15px 0 0 0}
+    .basket-count {float:left; display:block; border:none; padding:13px 0 0 5px}
     .basket-summ {float:none; text-align:center}
     .basket-btn {float:none; width:192px; margin:13px auto 0 auto}
 }
@@ -759,4 +764,14 @@ footer .logo-2 {padding:32px 0 0 104px}
     .page-404-image {padding:37px 30px 0 30px}
     .page-404-image img {width:100%}
     .page-404-text span {display:block; font-size:14px; font-family:MetaProMedium, sans-serif}
+}
+
+.content-crop-open {display:none}
+
+@media (max-width:1000px) {
+    .content-crop {position:relative; max-height:200px; overflow:hidden; margin:0 0 50px 0; padding:0 0 53px 0}
+    .content-crop.open {max-height:none}
+    .content-crop.active .content-crop-open {display:block; position:absolute; left:0; bottom:0; width:100%; height:53px; background:url(../images/content-crop.png)}
+    .content-crop.active .content-crop-open span {display:block; position:absolute; left:50%; bottom:0; margin:0 0 0 -17px; width:34px; height:27px; background:url(../images/content-crop-open.png)}
+    .content-crop.open .content-crop-open span {background-position:left -27px}
 }
