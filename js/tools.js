@@ -91,19 +91,38 @@ var sliderTimer     = null;
         $('input.maskPhone').mask('+7 (999) 999-99-99');
 
         $('form').each(function() {
-            $(this).validate({
-              invalidHandler: function(form, validatorcalc) {
-                  validatorcalc.showErrors();
-                  $('.form-field').each(function() {
-                      var curField = $(this);
-                      if (curField.find('label.error').length > 0) {
-                          curField.addClass('error');
-                      } else {
-                          curField.removeClass('error');
-                      }
-                  });
-              }
-            });
+            if ($(this).parents().filter('.header-phones-callback').length == 0) {
+                $(this).validate({
+                  invalidHandler: function(form, validatorcalc) {
+                      validatorcalc.showErrors();
+                      $('.form-field').each(function() {
+                          var curField = $(this);
+                          if (curField.find('label.error').length > 0) {
+                              curField.addClass('error');
+                          } else {
+                              curField.removeClass('error');
+                          }
+                      });
+                  }
+                });
+            }
+        });
+
+        $('.header-phones-callback form').validate({
+            submitHandler: function(form) {
+                $.ajax({
+                    type: 'POST',
+                    url: $(form).attr('action'),
+                    data: $(form).serialize(),
+                    dataType: 'html',
+                    cache: false
+                }).done(function(html) {
+                    if ($('.window').length > 0) {
+                        windowClose();
+                    }
+                    windowOpen(html);
+                });
+            }
         });
 
         $('.detail-photo-big a').fancybox({
@@ -178,14 +197,30 @@ var sliderTimer     = null;
         }
 
         $('.catalogue-ctrl-count-select-value').click(function(e) {
-            $('.catalogue-ctrl-count-select.open').removeClass('open');
-            $(this).parent().addClass('open');
+            var curSelect = $(this).parent();
+            if (curSelect.hasClass('open')) {
+                curSelect.removeClass('open');
+            } else {
+                $('.catalogue-ctrl-count-select.open').removeClass('open');
+                curSelect.addClass('open');
+            }
             e.preventDefault();
         });
 
         $(document).click(function(e) {
             if ($(e.target).parents().filter('.catalogue-ctrl-count-select').length == 0) {
                 $('.catalogue-ctrl-count-select.open').removeClass('open');
+            }
+        });
+
+        $('.header-callback').click(function(e) {
+            $('.header-phones-inner').toggleClass('open');
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.header-phones-inner').length == 0) {
+                $('.header-phones-inner').removeClass('open');
             }
         });
 

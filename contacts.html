@@ -82,10 +82,29 @@
                     </ul>
                 </div>
 
-                <a href="#" class="top-cart">
+                <div class="top-cart">
                     <img src="images/top-cart-icon.png" alt="" width="17" height="17" />
                     <span>2</span> товара
-                </a>
+                    <div class="top-cart-content">
+                        <div class="top-cart-item">
+                            <div class="top-cart-item-photo"><img src="files/top-cart-photo.jpg" alt="" width="38" height="51" /></div>
+                            <div class="top-cart-item-name">
+                                <div class="top-cart-item-name-title">Стол для чистки оружия</div>
+                                <div class="top-cart-item-name-descr">ДСП, две дверцы</div>
+                            </div>
+                            <div class="top-cart-item-count">15 шт.</div>
+                        </div>
+                        <div class="top-cart-item">
+                            <div class="top-cart-item-photo"><img src="files/top-cart-photo.jpg" alt="" width="38" height="51" /></div>
+                            <div class="top-cart-item-name">
+                                <div class="top-cart-item-name-title">Стол для чистки оружия</div>
+                                <div class="top-cart-item-name-descr">ДСП, две дверцы</div>
+                            </div>
+                            <div class="top-cart-item-count">11 шт.</div>
+                        </div>
+                        <a href="#" class="top-cart-link">оформить заказ</a>
+                    </div>
+                </div>
 
                 <div class="top-search">
                     <form action="#" method="post">
@@ -116,8 +135,21 @@
                         <div class="header-phones-item">+7 (495) <strong>123-45-68</strong></div>
                     </div>
                     <a href="#" class="header-callback">Заказать звонок</a>
+                    <div class="header-phones-callback">
+                        <form action="windows/success.html" method="post">
+                            <div class="header-phones-callback-field">
+                                <div class="header-phones-callback-label">Ваше имя</div>
+                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Владимир Владимирович" class="required" /></div>
+                            </div>
+                            <div class="header-phones-callback-field">
+                                <div class="header-phones-callback-label">Телефон</div>
+                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="+7 (495) 123-45-67" class="required maskPhone" /></div>
+                            </div>
+                            <div class="header-phones-callback-submit"><input type="submit" value="Отправить" class="btn-order" /></div>
+                        </form>
+                    </div>
                 </div>
-                <div class="header-phones-hint">Ежедневно с 09.00 до 18.00</div>
+                <div class="header-phones-hint">Ежедневно с 09:00 до 18:00</div>
             </div>
         </header>
 
@@ -127,35 +159,54 @@
                     <a href="#">Каталог</a>
                     <div class="nav-sub">
                         <ul class="nav-sub-links">
-                            <li><a href="#"><span><img src="images/nav-sub-link-1.png" alt="" width="20" height="19" /></span>мебель для воинских частей</a></li>
-                            <li><a href="#"><span><img src="images/nav-sub-link-2.png" alt="" width="20" height="18" /></span>мебель для офиса и музеев</a></li>
-                            <li><a href="#"><span><img src="images/nav-sub-link-3.png" alt="" width="20" height="15" /></span>мебель для служебного жилья</a></li>
-                            <li><a href="#"><span><img src="images/nav-sub-link-4.png" alt="" width="18" height="18" /></span>мебель для гостиниц и хостелов</a></li>
-                            <li><a href="#"><span><img src="images/nav-sub-link-5.png" alt="" width="20" height="21" /></span>скачать каталог</a></li>
+                            <li><a href="#"><span><img src="images/slider-menu-icon-1.png" alt="" width="23" height="22" /></span>мебель для воинских частей</a></li>
+                            <li><a href="#"><span><img src="images/slider-menu-icon-2.png" alt="" width="23" height="20" /></span>мебель для офиса и музеев</a></li>
+                            <li><a href="#"><span><img src="images/slider-menu-icon-3.png" alt="" width="23" height="17" /></span>мебель для служебного жилья</a></li>
+                            <li><a href="#"><span><img src="images/slider-menu-icon-4.png" alt="" width="21" height="22" /></span>мебель для гостиниц и хостелов</a></li>
+                            <li><a href="#"><span><img src="images/slider-menu-icon-5.png" alt="" width="21" height="21" /></span>скачать каталог</a></li>
                         </ul>
                         <ul class="nav-sub-sections">
-                            <li><a href="#">Компьютерные столы</a></li>
-                            <li><a href="#">Тумбы</a></li>
-                            <li><a href="#">Диваны</a></li>
-                            <li><a href="#">Письменные столы</a></li>
-                            <li><a href="#">Трибуны</a></li>
-                            <li><a href="#">Кровати</a></li>
-                            <li><a href="#">Шкафы</a></li>
-                            <li><a href="#">Антресоли</a></li>
-                            <li><a href="#">Кресла</a></li>
-                            <li><a href="#">Стулья</a></li>
-                            <li><a href="#">Полки</a></li>
-                            <li><a href="#">Стилажи</a></li>
-                            <li><a href="#">Табуреты</a></li>
-                            <li><a href="#">Витрины</a></li>
-                            <li><a href="#">Комоды</a></li>
+                            <li><a href="#">Антресоль</a></li>
+                            <li><a href="#">Вешалка</a></li>
+                            <li><a href="#">Витрина</a></li>
+                            <li><a href="#">Гардероб</a></li>
+                            <li><a href="#">Доска</a></li>
+                            <li><a href="#">Зеркало</a></li>
+                            <li><a href="#">Комод</a></li>
+                        </ul>
+                        <ul class="nav-sub-sections">
+                            <li><a href="#">Кровать</a></li>
+                            <li><a href="#">Кушетка</a></li>
+                            <li><a href="#">Место</a></li>
+                            <li><a href="#">Набор</a></li>
+                            <li><a href="#">Пирамида</a></li>
+                            <li><a href="#">Подиум</a></li>
+                            <li><a href="#">Подставка</a></li>
+                        </ul>
+                        <ul class="nav-sub-sections">
+                            <li><a href="#">Полка</a></li>
+                            <li><a href="#">Секция</a></li>
+                            <li><a href="#">Скамья</a></li>
+                            <li><a href="#">Стелла</a></li>
+                            <li><a href="#">Стеллаж</a></li>
+                            <li><a href="#">Стенка</a></li>
+                            <li><a href="#">Стол</a></li>
+                        </ul>
+                        <ul class="nav-sub-sections">
+                            <li><a href="#">Столешница</a></li>
+                            <li><a href="#">Стул</a></li>
+                            <li><a href="#">Табурет</a></li>
+                            <li><a href="#">Трибуна</a></li>
+                            <li><a href="#">Тумба</a></li>
+                            <li><a href="#">Шкатулка</a></li>
+                            <li><a href="#">Шкаф</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a href="#">Оплата и доставка</a></li>
                 <li><a href="#">Гарантия и сервис</a></li>
                 <li><a href="#">Акции</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li class="active"><a href="#">Контакты</a></li>
             </ul>
         </nav>
 
@@ -207,7 +258,7 @@
                         geocoder = new google.maps.Geocoder();
                         var myLatlng = new google.maps.LatLng(55.701098, 37.618046);
                         var myOptions = {
-                            zoom: 17,
+                            zoom: 18,
                             center: myLatlng,
                             mapTypeControl: false,
                             panControl: true,
@@ -224,9 +275,15 @@
                                 map.setCenter(results[0].geometry.location);
                                 myLatlng_recalc = results[0].geometry.location;
 
+                                var image_trace =   new google.maps.MarkerImage('images/map-icon.png',
+                                                    new google.maps.Size(95, 92),
+                                                    new google.maps.Point(0,0),
+                                                    new google.maps.Point(34, 92));
+
                                 var marker = new google.maps.Marker({
                                     map: map,
-                                    position: results[0].geometry.location
+                                    position: results[0].geometry.location,
+                                    icon: image_trace
                                 });
                             }
                         });
