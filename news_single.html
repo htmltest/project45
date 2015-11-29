@@ -138,15 +138,22 @@
                     <div class="header-phones-callback">
                         <form action="windows/success.html" method="post">
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Ваше имя</div>
-                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Владимир Владимирович" class="required" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
                             </div>
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Телефон</div>
-                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="+7 (495) 123-45-67" class="required maskPhone" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="Телефон" class="required maskPhone" /></div>
                             </div>
                             <div class="header-phones-callback-submit"><input type="submit" value="Отправить" class="btn-order" /></div>
                         </form>
+                        <div class="header-phones-callback-error">
+                            <div class="header-phones-callback-error-title">произошла ошибка!</div>
+                            <div class="header-phones-callback-error-text"></div>
+                            <a href="#" class="header-phones-callback-error-close">закрыть</a>
+                        </div>
+                        <div class="header-phones-callback-success">
+                            <div class="header-phones-callback-success-title">мы вам перезвоним</div>
+                            <a href="#" class="header-phones-callback-success-close">закрыть</a>
+                        </div>
                     </div>
                 </div>
                 <div class="header-phones-hint">Ежедневно с 09:00 до 18:00</div>
@@ -243,36 +250,38 @@
 
             <!-- main -->
             <div class="main main-news-detail">
-                <div class="main-news">
-                    <div class="main-title">Другие новости</div>
-                    <div class="main-news-list">
-                        <div class="main-news-content">
-                            <div class="main-news-item">
-                                <a href="#">
-                                    <div class="main-news-item-name">75 лет компании АО "1470 УМТО"</div>
-                                    <div class="main-news-item-anonce">15 мая 2015 года АО «1470 УМТО» отмечает свой юбилей – 75 лет компании!<br />Для всех работников и ветеранов предприятия это значимая дата, символизирующая стабильность и благополучие нашего положения, сильные традиции нашего предприятия!</div>
-                                </a>
-                                <div class="main-news-item-date">30 апреля 2015</div>
+                <div class="main-inner">
+                    <div class="main-news">
+                        <div class="main-title">Другие новости</div>
+                        <div class="main-news-list">
+                            <div class="main-news-content">
+                                <div class="main-news-item">
+                                    <a href="#">
+                                        <div class="main-news-item-name">75 лет компании АО "1470 УМТО"</div>
+                                        <div class="main-news-item-anonce">15 мая 2015 года АО «1470 УМТО» отмечает свой юбилей – 75 лет компании!<br />Для всех работников и ветеранов предприятия это значимая дата, символизирующая стабильность и благополучие нашего положения, сильные традиции нашего предприятия!</div>
+                                    </a>
+                                    <div class="main-news-item-date">30 апреля 2015</div>
+                                </div>
+                                <div class="main-news-item">
+                                    <a href="#">
+                                        <div class="main-news-item-name">СОЗДАНИЕ НА БАЗЕ АО «1470 УМТО» ЕДИНОГО ОБЕСПЕЧИВАЮЩЕГО КОМПЛЕКСА</div>
+                                        <div class="main-news-item-anonce">В январе 2015 года Управляющей организацией АО «Оборонстрой» принято решение о создании на базе АО «1470 УМТО» единого обеспечивающего комплекса с собственной производственной и логистической базой.</div>
+                                    </a>
+                                    <div class="main-news-item-date">30 апреля 2014</div>
+                                </div>
+                                <div class="main-news-item">
+                                    <a href="#">
+                                        <div class="main-news-item-name">ОТКРЫТИЕ ПУТЕПРОВОДА НА МОСКОВСКОМ МАЛОМ КОЛЬЦЕ!</div>
+                                        <div class="main-news-item-anonce">29 ноября в 12.00 в Московской области Росавтодор торжественно открыл рабочее движение по новому путепроводу на Московском малом кольце, км 2 участка от Киевского шоссе до Минского шоссе.</div>
+                                    </a>
+                                    <div class="main-news-item-date">30 апреля 2014</div>
+                                </div>
                             </div>
-                            <div class="main-news-item">
-                                <a href="#">
-                                    <div class="main-news-item-name">СОЗДАНИЕ НА БАЗЕ АО «1470 УМТО» ЕДИНОГО ОБЕСПЕЧИВАЮЩЕГО КОМПЛЕКСА</div>
-                                    <div class="main-news-item-anonce">В январе 2015 года Управляющей организацией АО «Оборонстрой» принято решение о создании на базе АО «1470 УМТО» единого обеспечивающего комплекса с собственной производственной и логистической базой.</div>
-                                </a>
-                                <div class="main-news-item-date">30 апреля 2014</div>
-                            </div>
-                            <div class="main-news-item">
-                                <a href="#">
-                                    <div class="main-news-item-name">ОТКРЫТИЕ ПУТЕПРОВОДА НА МОСКОВСКОМ МАЛОМ КОЛЬЦЕ!</div>
-                                    <div class="main-news-item-anonce">29 ноября в 12.00 в Московской области Росавтодор торжественно открыл рабочее движение по новому путепроводу на Московском малом кольце, км 2 участка от Киевского шоссе до Минского шоссе.</div>
-                                </a>
-                                <div class="main-news-item-date">30 апреля 2014</div>
-                            </div>
+                            <a href="#" class="main-news-prev"></a>
+                            <a href="#" class="main-news-next"></a>
                         </div>
-                        <a href="#" class="main-news-prev"></a>
-                        <a href="#" class="main-news-next"></a>
+                        <div class="main-news-all"><a href="#">все новости</a></div>
                     </div>
-                    <div class="main-news-all"><a href="#">все новости</a></div>
                 </div>
             </div>
             <!-- main END -->

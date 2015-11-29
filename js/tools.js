@@ -109,6 +109,17 @@ var sliderTimer     = null;
         });
 
         $('.header-phones-callback form').validate({
+            invalidHandler: function(form, validatorcalc) {
+                validatorcalc.showErrors();
+                $('.header-phones-callback form').hide();
+                $('.header-phones-callback-error-text').html('');
+                if ($('.header-phones-callback-input input:first').hasClass('error')) {
+                    $('.header-phones-callback-error-text').html('не введено имя');
+                } else if ($('.header-phones-callback-input input:last').hasClass('error')) {
+                    $('.header-phones-callback-error-text').html('неверно указан формат телефона');
+                }
+                $('.header-phones-callback-error').show();
+            },
             submitHandler: function(form) {
                 $.ajax({
                     type: 'POST',
@@ -117,12 +128,23 @@ var sliderTimer     = null;
                     dataType: 'html',
                     cache: false
                 }).done(function(html) {
-                    if ($('.window').length > 0) {
-                        windowClose();
-                    }
-                    windowOpen(html);
+                    $('.header-phones-callback form').hide();
+                    $('.header-phones-callback-success').show();
                 });
             }
+        });
+
+        $('.header-phones-callback-error-close').click(function(e) {
+            $('.header-phones-callback form').show();
+            $('.header-phones-callback-error').hide();
+            e.preventDefault();
+        });
+
+        $('.header-phones-callback-success-close').click(function(e) {
+            $('.header-phones-callback form').show();
+            $('.header-phones-callback-success').hide();
+            $('.header-phones-inner').removeClass('open');
+            e.preventDefault();
         });
 
         $('.detail-photo-big a').fancybox({
@@ -232,6 +254,8 @@ var sliderTimer     = null;
             curLink.toggleClass('active');
 
             $('.filter').toggleClass('active');
+            $('.filter-preview').toggleClass('active');
+            updateFilterPreview();
 
             e.preventDefault();
         });
@@ -251,6 +275,40 @@ var sliderTimer     = null;
             }, 100);
         });
 
+        $('.filter').each(function() {
+            updateFilterPreview();
+        });
+
+        function updateFilterPreview() {
+            var newHTML = '';
+            $('.filter-row').each(function() {
+                var curRow = $(this);
+                var curValues = '';
+                if (curRow.find('.detail-color-list').length == 1) {
+                    curRow.find('.detail-color-item.checked').each(function() {
+                        if (curValues == '') {
+                            curValues += $(this).attr('title');
+                        } else {
+                            curValues += ', ' + $(this).attr('title');
+                        }
+                    });
+                }
+                if (curRow.find('.filter-type-list').length == 1) {
+                    curRow.find('.filter-type-item.checked').each(function() {
+                        if (curValues == '') {
+                            curValues += $(this).find('span').text();
+                        } else {
+                            curValues += ', ' + $(this).find('span').text();
+                        }
+                    });
+                }
+                if (curValues != '') {
+                    newHTML += '<strong>' + curRow.find('.filter-label').html() + '</strong> <span>' + curValues + '</span>';
+                }
+            });
+            $('.filter-preview').html(newHTML);
+        }
+
         if (!Modernizr.touch) {
             $('body').addClass('hoverable');
         } else {
@@ -262,6 +320,17 @@ var sliderTimer     = null;
             $(document).click(function(e) {
                 if ($(e.target).parents().filter('.best-item').length == 0) {
                     $('.best-item.open').removeClass('open');
+                }
+            });
+
+            $('.list-item').click(function() {
+                $('.list-item.open').removeClass('open');
+                $(this).addClass('open');
+            });
+
+            $(document).click(function(e) {
+                if ($(e.target).parents().filter('.list-item').length == 0) {
+                    $('.list-item.open').removeClass('open');
                 }
             });
         }
@@ -351,14 +420,14 @@ var sliderTimer     = null;
             e.preventDefault();
         });
 
-        $('.main-news-content').data('curIndex', 0);
+        $('.main .main-news-content').data('curIndex', 0);
 
         $('.main-news-prev').click(function(e) {
             var curBlock = $(this).parent();
             curBlock.find('.main-news-content').stop(true, true);
-            curBlock.find('.main-news-item:first').stop(true, true);
+            curBlock.find('.main .main-news-item:first').stop(true, true);
             var curLeft = Number(curBlock.find('.main-news-item:first').css('margin-left').replace(/px/, ''));
-            var curIndex = $('.main-news-content').data('curIndex');
+            var curIndex = $('.main .main-news-content').data('curIndex');
             curIndex--;
             if (curIndex < 0) {
                 curIndex = 0;
@@ -375,7 +444,7 @@ var sliderTimer     = null;
             curBlock.find('.main-news-content').stop(true, true);
             curBlock.find('.main-news-item:first').stop(true, true);
             var curLeft = Number(curBlock.find('.main-news-item:first').css('margin-left').replace(/px/, ''));
-            var curIndex = $('.main-news-content').data('curIndex');
+            var curIndex = $('.main .main-news-content').data('curIndex');
             curIndex++;
             if (curIndex > curBlock.find('.main-news-item').length - 1) {
                 curIndex = curBlock.find('.main-news-item').length - 1;
@@ -405,9 +474,9 @@ var sliderTimer     = null;
 
         $('.main-news-content').stop(true, true).removeAttr('style');
         $('.main-news-content').data('curIndex', 0);
-        $('.main-news-item:first').stop(true, true).removeAttr('style');
-        if ($(window).width() <= 1280) {
-            $('.main-news-content').height($('.main-news-item:first').outerHeight());
+        $('.main .main-news-item:first').stop(true, true).removeAttr('style');
+        if ($(window).width() <= 940) {
+            $('.main .main-news-content').height($('.main-news-item:first').outerHeight());
         }
     });
 

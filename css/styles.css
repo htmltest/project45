@@ -170,22 +170,29 @@ header:after {content:"."; display:block; clear:both; visibility:hidden; height:
 .header-callback:active {background:#d3ae02}
 .header-phones-inner.open .header-callback {background:#ffd200; border-bottom:2px solid #ffd200; margin-bottom:-2px}
 .header-phones-hint {font:12px/20px "Open Sans", sans-serif; padding:5px 0 0 10px}
-.header-phones-callback {display:none; position:absolute; right:0; top:32px; z-index:98; background:#ffd200; padding:0 20px 16px 20px; width:660px}
-.header-phones-callback:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.header-phones-callback {display:none; position:absolute; right:0; top:32px; z-index:98; background:#ffd200; padding:0 20px; width:180px; height:170px}
 .header-phones-inner.open .header-phones-callback {display:block}
-.header-phones-callback form {margin:0; padding:0}
-.header-phones-callback-field {float:left; padding:13px 20px 0 0; width:210px}
-.header-phones-callback-label {color:#272727; font-style:italic; padding:0 0 8px 0}
-.header-phones-callback-input input {vertical-align:top; width:100%; height:35px; box-sizing:border-box; margin:0; padding:0 8px; outline:none; border:1px solid #b3af9f; border-radius:3px; background:#fff; color:#000; font:14px/33px "Open Sans", sans-serif; -webkit-appearance:none}
-.header-phones-callback-input input::-webkit-input-placeholder {color:#afafaf; opacity:1; font-style:italic}
-.header-phones-callback-input input::-moz-placeholder {color:#afafaf; opacity:1; font-style:italic}
-.header-phones-callback-input input:-ms-input-placeholder {color:#afafaf; opacity:1; font-style:italic}
+.header-phones-callback form {margin:0; padding:20px 0 0 0}
+.header-phones-callback-field {padding:5px 0 0 0}
+.header-phones-callback-input input {vertical-align:top; width:100%; height:35px; box-sizing:border-box; margin:0; padding:0 8px; outline:none; border:1px solid #b3af9f; border-radius:3px; background:#fff; color:#272727; font:14px/33px "Open Sans", sans-serif; -webkit-appearance:none}
+.header-phones-callback-input input::-webkit-input-placeholder {color:#272727; opacity:1; font-style:italic}
+.header-phones-callback-input input::-moz-placeholder {color:#272727; opacity:1; font-style:italic}
+.header-phones-callback-input input:-ms-input-placeholder {color:#272727; opacity:1; font-style:italic}
 .header-phones-callback-input input.error {border-color:#f00}
 .header-phones-callback-input label.error {display:none !important}
-.header-phones-callback-submit {float:left; padding:41px 0 0 0; width:200px}
+.header-phones-callback-submit {padding:16px 0 0 0}
 .header-phones-callback-submit .btn-order {height:35px; line-height:33px; background:transparent; border:1px solid #bf9d00; border-radius:3px}
 .header-phones-callback-submit .btn-order:hover {background:#ffe56b}
 .header-phones-callback-submit .btn-order:active {background:#d3ae02}
+.header-phones-callback-error {display:none; height:170px; position:relative; background:url(../images/header-phones-callback-error.png) no-repeat center 33px; text-align:center}
+.header-phones-callback-error-title {font:bold 12px/15px "Roboto Condensed", sans-serif; text-transform:uppercase; color:#272727; padding:88px 0 0 0}
+.header-phones-callback-error-text {font-size:12px; line-height:15px; color:#272727}
+.header-phones-callback-error-close {position:absolute; right:-6px; bottom:10px; text-decoration:none; font:bold 10px/15px "Roboto Condensed", sans-serif; text-transform:uppercase; color:#272727}
+.header-phones-callback-error-close:hover {color:#90a356}
+.header-phones-callback-success {display:none; height:170px; position:relative; background:url(../images/header-phones-callback-success.png) no-repeat center 43px; text-align:center}
+.header-phones-callback-success-title {font:bold 12px/15px "Roboto Condensed", sans-serif; text-transform:uppercase; color:#272727; padding:94px 0 0 0}
+.header-phones-callback-success-close {position:absolute; right:-6px; bottom:10px; text-decoration:none; font:bold 10px/15px "Roboto Condensed", sans-serif; text-transform:uppercase; color:#272727}
+.header-phones-callback-success-close:hover {color:#90a356}
 
 @media (max-width:940px) {
     header {padding:60px 15px 23px 15px; border-bottom:1px solid #667242}
@@ -252,17 +259,17 @@ nav > ul > li:hover .nav-sub {top:100%}
 
 .slider {max-width:1280px; margin:0 auto; height:460px; position:relative}
 .slider-content {position:relative}
-.slider-content ul {margin:0; padding:0; list-style:none; position:relative}
-.slider-content ul li {position:absolute; left:-9999px; top:-9999px; width:1280px; height:460px; overflow:hidden; margin:0; padding:0; background-position:center; background-repeat:no-repeat; background-size:cover}
+.slider-content ul {width:100%; margin:0; padding:0; list-style:none; position:relative}
+.slider-content ul li {position:absolute; left:-9999px; top:-9999px; width:100%; height:460px; overflow:hidden; margin:0; padding:0; background-position:center; background-repeat:no-repeat; background-size:cover}
 .slider-content ul li:before {display:none}
-.slider-item {position:relative; padding:0 0 0 570px; width:460px; color:#fff}
+.slider-item {position:relative; padding:0 0 0 320px; width:460px; color:#fff; margin:0 auto}
 .slider-item-title {font:bold 40px/40px "Roboto Condensed", sans-serif; text-shadow:1px 1px 1px rgba(12, 10, 5, .45); padding:78px 0 0 0}
 .slider-item-text {font:20px/20px "Roboto Condensed", sans-serif; padding:21px 0 0 0}
 .slider-item-link {padding:43px 0 0 0}
 .slider-item-link a {display:block; width:300px; height:51px; background:#ffd200; text-align:center; text-transform:uppercase; text-decoration:none; font:bold 15px/51px "Roboto Condensed", sans-serif}
 .slider-item-link a:hover {background:#ffe56b}
 .slider-item-link a:active {background:#d3ae02}
-.slider-menu {position:absolute; left:170px; top:80px; width:300px; z-index:3}
+.slider-menu {position:absolute; left:50%; margin-left:-470px; top:80px; width:300px; z-index:3}
 .slider-menu ul {margin:0; padding:0; list-style:none}
 .slider-menu ul li {margin:0; padding:1px 0 0 0}
 .slider-menu ul li:before {display:none}
@@ -279,7 +286,7 @@ nav > ul > li:hover .nav-sub {top:100%}
 .slider-ctrl a:hover {border-color:#ffd200}
 .slider-ctrl a.active {background:#ffd200; border-color:#ffd200}
 
-@media (max-width:1280px) {
+@media (max-width:940px) {
     .slider {height:470px}
     .slider-content ul li {width:100%; height:470px}
     .slider-item {padding:0; width:auto}
@@ -287,7 +294,7 @@ nav > ul > li:hover .nav-sub {top:100%}
     .slider-item-text {font-size:14px; line-height:17px; padding:14px 15px 0 15px}
     .slider-item-link {padding:22px 0 0 0}
     .slider-item-link a {width:130px; height:39px; font-size:12px; line-height:39px; margin:0 auto}
-    .slider-menu {left:0; bottom:10px; top:auto; width:100%; padding:0 10px; box-sizing:border-box}
+    .slider-menu {left:0; bottom:10px; top:auto; width:100%; padding:0 10px; box-sizing:border-box; margin:0}
     .slider-menu ul li {padding:2px 0 0 0}
     .slider-menu ul li a {font-size:14px; line-height:41px; height:41px}
     .slider-menu-icon {width:41px; height:41px}
@@ -351,6 +358,43 @@ nav > ul > li:hover .nav-sub {top:100%}
 .best-item-detail-ctrl .detail-count {float:left; padding:0}
 .best-item-detail-buy {float:right; width:110px}
 
+.list {padding:18px 0 28px 0}
+.list-item {position:relative; padding:10px}
+.list-item:nth-child(odd) {background:#f4f4f4}
+.list-item-inner {display:table; width:100%}
+.list-item-img {display:table-cell; vertical-align:middle; width:50px; line-height:0}
+.list-item-img img {border:1px solid #ccc}
+.list-item-text {display:table-cell; vertical-align:middle; padding:0 20px}
+.list-item-name {text-transform:uppercase; color:#272727; font:bold 15px/20px "Roboto Condensed", sans-serif}
+.list-item-descr {font-size:12px; color:#272727; padding:1px 0 0 0}
+.list-item-descr dl {margin:0; padding:0}
+.list-item-descr dt {display:inline; color:#7b7b7b; margin:0; padding:0}
+.list-item-descr dd {display:inline; margin:0 20px 0 0; padding:0}
+.list-item-buy {display:table-cell; vertical-align:middle; width:60px}
+.list-item-buy div {width:60px; height:30px; background:#ffd200 url(../images/list-item-buy.png)}
+
+.list-item-detail {display:none; position:absolute; left:0; top:0; width:100%; padding:18px 37px 40px 37px; box-sizing:border-box; background:#fff; border:3px solid #ffd200; z-index:9; box-shadow:4px 4px 18px rgba(68, 68, 67, .52)}
+.list-item-detail:after {content:""; display:block; width:1px; height:100%; position:absolute; left:50%; top:0; background:#eee}
+.hoverable .list-item:hover .list-item-detail,
+.list-item.open .list-item-detail {display:block}
+.list-item-detail .best-item-detail-photos {float:left; width:45%}
+.list-item-detail .best-item-detail-title,
+.list-item-detail .best-item-detail-text,
+.list-item-detail .best-item-detail-ctrl {margin:0 0 0 55%}
+.list-item-detail .best-item-detail-text dl:after {display:none}
+.list-item-detail .best-item-detail-ctrl:after {display:none}
+
+@media (max-width:940px) {
+    .list-item-detail:after {display:none}
+    .list-item-detail .best-item-detail-photos  {float:none; width:100%}
+    .list-item-detail .best-item-detail-title,
+    .list-item-detail .best-item-detail-text,
+    .list-item-detail .best-item-detail-ctrl {margin:0}
+    .list-item-detail .best-item-detail-text dl:after {display:block}
+    .list-item-detail .best-item-detail-ctrl:after {display:block}
+    .list-item-detail {left:-13px; box-sizing:content-box; padding-left:10px; padding-right:10px}
+}
+
 .btn-order {display:block; width:100%; height:39px; font:bold 12px/39px "Roboto Condensed", sans-serif; text-align:center; text-transform:uppercase; text-decoration:none; color:#272727; background:#ffd200; border:none; cursor:pointer; border-radius:0; margin:0; padding:0; outline:none; vertical-align:top; -webkit-appearance:none}
 .btn-order:hover {background:#ffe56b}
 .btn-order:active {background:#d3ae02}
@@ -359,8 +403,9 @@ nav > ul > li:hover .nav-sub {top:100%}
 .btn-cancel:hover {background:#808f52}
 .btn-cancel:active {background:#4d5632}
 
-.main {background:#f1f1f1; width:900px; margin:0 auto; padding:0 170px 59px 170px}
-.main:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.main {background:#f1f1f1; max-width:1240px; margin:0 auto; padding:0 0 59px 0}
+.main-inner {max-width:900px; margin:0 auto}
+.main-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .main-about {float:left; width:420px}
 .main-title {text-transform:uppercase; font:bold 20px/20px "Roboto Condensed", sans-serif; padding:52px 0 0 0}
 h1+.main-title {padding:0}
@@ -386,7 +431,7 @@ h1+.main-title {padding:0}
 .main-news-detail .main-news-all a {margin:0 auto}
 .main-news-detail .main-news-item {float:left; width:33.33%; border:none; padding:0 0 0 20px; box-sizing:border-box}
 
-@media (max-width:1280px) {
+@media (max-width:940px) {
     .main {max-width:910px; padding-left:15px; padding-right:15px; width:auto}
     .main-about {float:none; width:auto}
     .main-title {padding-top:30px}
@@ -394,9 +439,9 @@ h1+.main-title {padding:0}
     .main-news {float:none; width:auto; border-top:1px solid #303030; margin:30px -15px 0 -15px}
     .main-news .main-title {padding-left:45px}
     .main-news-all a  {margin:0 auto}
-    .main-news-list {position:relative; margin:10px 0 0 0; padding:0 45px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
-    .main-news-content {position:relative; width:100%; overflow:hidden}
-    .main-news-item {display:inline-block; vertical-align:top; width:100%; font-size:14px; line-height:20px; letter-spacing:0; white-space:normal; border:none}
+    .main .main-news-list {position:relative; margin:10px 0 0 0; padding:0 45px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+    .main .main-news-content {position:relative; width:100%; overflow:hidden}
+    .main .main-news-item {display:inline-block; vertical-align:top; width:100%; font-size:14px; line-height:20px; letter-spacing:0; white-space:normal; border:none}
     .main-news-prev,
     .main-news-next {display:block; width:20px; height:22px; position:absolute; top:50%; margin-top:-11px; background:url(../images/mobile-arrows.png)}
     .main-news-prev {left:15px; background-position:left top}
@@ -452,7 +497,7 @@ footer .logo-2 {padding:32px 0 0 104px}
 .footer-menu ul li a {color:#546034}
 .footer-menu ul li a:hover {text-decoration:none}
 
-@media (max-width:1280px) {
+@media (max-width:940px) {
     footer {border:none; padding:0 0 21px 0; background-position:214px bottom}
     .footer-menu {float:none; width:auto; padding:12px 15px 25px 0; background:#f1f1f1; font-size:0; line-height:0; letter-spacing:-1px}
     .footer-menu ul li {display:inline-block; vertical-align:top; width:125px; font-size:14px; line-height:20px; letter-spacing:0; padding:10px 0 0 15px}
@@ -472,8 +517,8 @@ footer .logo-2 {padding:32px 0 0 104px}
 }
 
 .set .best-title {text-align:left}
-.content .main {margin:90px 0 60px -170px}
-.content .main-news-detail {margin:60px 0 0 -170px}
+.content .main {margin:90px -170px 60px -170px}
+.content .main-news-detail {margin:60px -170px 0 -170px}
 
 @media (max-width:1280px) {
     .content .main {max-width:910px; padding-left:15px; padding-right:15px; width:auto; margin:0}
@@ -713,11 +758,15 @@ footer .logo-2 {padding:32px 0 0 104px}
 .pager a.pager-next {background-position:-11px top; margin:0 0 0 10px}
 .pager a.pager-next:hover {background-position:-11px -10px}
 
-.filter-ctrl {float:right; font-size:12px; text-transform:none; text-decoration:none; position:relative; padding:0 16px 0 0}
-.filter-ctrl:after {content:""; display:block; width:9px; height:10px; background:url(../images/filter-arrows.png) left -10px; position:absolute; right:0; top:50%; margin-top:-5px}
+.filter-ctrl {float:right; margin:-4px 0 0 0; font-size:15px; font-weight:normal; text-transform:none; text-decoration:none; position:relative; padding:0 40px 0 20px; background:#f3f3f3; line-height:35px; height:35px}
+.filter-ctrl:after {content:""; display:block; width:9px; height:10px; background:url(../images/filter-arrows.png) left -10px; position:absolute; right:20px; top:50%; margin-top:-5px}
 .filter-ctrl.active:after {background-position:left top}
 
-.filter {display:none; background:#f3f3f3; padding:6px 33px 16px 33px; margin:26px 0 58px 0}
+.filter-preview {background:#f9f9f9; text-transform:uppercase; color:#a5a4a4; font-size:12px; line-height:15px; padding:10px 20px 10px 0}
+.filter-preview strong {margin-left:20px}
+.filter-preview.active {display:none}
+
+.filter {display:none; background:#f3f3f3; padding:6px 33px 16px 33px; margin:16px 0 58px 0}
 .filter.active {display:block}
 .filter-row {display:table; width:100%; margin:15px 0 0 0}
 .filter-label {display:table-cell; vertical-align:middle; white-space:nowrap; color:#231f20; font:bold 12px/23px "Roboto Condensed", sans-serif; text-transform:uppercase; padding:0 15px 0 0}

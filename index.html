@@ -138,15 +138,22 @@
                     <div class="header-phones-callback">
                         <form action="windows/success.html" method="post">
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Ваше имя</div>
-                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Владимир Владимирович" class="required" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
                             </div>
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Телефон</div>
-                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="+7 (495) 123-45-67" class="required maskPhone" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="Телефон" class="required maskPhone" /></div>
                             </div>
                             <div class="header-phones-callback-submit"><input type="submit" value="Отправить" class="btn-order" /></div>
                         </form>
+                        <div class="header-phones-callback-error">
+                            <div class="header-phones-callback-error-title">произошла ошибка!</div>
+                            <div class="header-phones-callback-error-text"></div>
+                            <a href="#" class="header-phones-callback-error-close">закрыть</a>
+                        </div>
+                        <div class="header-phones-callback-success">
+                            <div class="header-phones-callback-success-title">мы вам перезвоним</div>
+                            <a href="#" class="header-phones-callback-success-close">закрыть</a>
+                        </div>
                     </div>
                 </div>
                 <div class="header-phones-hint">Ежедневно с 09:00 до 18:00</div>
@@ -440,42 +447,44 @@
 
         <!-- main -->
         <div class="main">
-            <div class="main-about">
-                <div class="main-title">О компании</div>
-                <div class="main-about-text">
-                    <div class="content-crop">
-                        <div class="content-crop-inner">
-                            <p>Мебельная фабрика ОборонМебель - крупное, динамично развивающееся российское предприятие, флагман в производстве мебели малых форм для МО РФ, набирающий обороты в сфере производства модульной мебели. Компания занимает прочные позиции на рынке уже 17 лет (с 1998 года), за это время заслужила прекрасную деловую репутацию надежного партнера и ответственного производителя.</p>
-                            <p>Лучшее российское оборудование. Фабрика ОборонСтрой имеет собственные производственные и складские площадки на территории РФ, оснащённые современным оборудованием ведущих российских компаний. Все оборудование оснащено ЧПУ (числовым программным управлением), благодаря чему достигается высокая чистота обработки деталей и точность присадки. Результатом применения передовой поточной технологии и высокопроизводительного оборудования (высокоточных обрабатывающих центров) являются значительные объёмы выпускаемой продукции, изготавливаемые в короткие сроки.</p>
+            <div class="main-inner">
+                <div class="main-about">
+                    <div class="main-title">О компании</div>
+                    <div class="main-about-text">
+                        <div class="content-crop">
+                            <div class="content-crop-inner">
+                                <p>Мебельная фабрика ОборонМебель - крупное, динамично развивающееся российское предприятие, флагман в производстве мебели малых форм для МО РФ, набирающий обороты в сфере производства модульной мебели. Компания занимает прочные позиции на рынке уже 17 лет (с 1998 года), за это время заслужила прекрасную деловую репутацию надежного партнера и ответственного производителя.</p>
+                                <p>Лучшее российское оборудование. Фабрика ОборонСтрой имеет собственные производственные и складские площадки на территории РФ, оснащённые современным оборудованием ведущих российских компаний. Все оборудование оснащено ЧПУ (числовым программным управлением), благодаря чему достигается высокая чистота обработки деталей и точность присадки. Результатом применения передовой поточной технологии и высокопроизводительного оборудования (высокоточных обрабатывающих центров) являются значительные объёмы выпускаемой продукции, изготавливаемые в короткие сроки.</p>
+                            </div>
+                            <a href="#" class="content-crop-open"><span></span></a>
                         </div>
-                        <a href="#" class="content-crop-open"><span></span></a>
                     </div>
                 </div>
-            </div>
 
-            <div class="main-news">
-                <div class="main-title">Новости</div>
-                <div class="main-news-list">
-                    <div class="main-news-content">
-                        <div class="main-news-item">
-                            <a href="#">
-                                <div class="main-news-item-name">75 лет компании АО "1470 УМТО"</div>
-                                <div class="main-news-item-anonce">15 мая 2015 года АО «1470 УМТО» отмечает свой юбилей – 75 лет компании!</div>
-                            </a>
-                            <div class="main-news-item-date">30 апреля 2015</div>
+                <div class="main-news">
+                    <div class="main-title">Новости</div>
+                    <div class="main-news-list">
+                        <div class="main-news-content">
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-name">75 лет компании АО "1470 УМТО"</div>
+                                    <div class="main-news-item-anonce">15 мая 2015 года АО «1470 УМТО» отмечает свой юбилей – 75 лет компании!</div>
+                                </a>
+                                <div class="main-news-item-date">30 апреля 2015</div>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-name">Новое направление деятельности компании ОАО "1470 УМТО"</div>
+                                    <div class="main-news-item-anonce">В соответствии с решением внеочередного общего собрания акционеров от 21.07.2014 г. ОАО «1470 УМТО» реорганизовано путем присоединения к нему ОАО «Промышленно-эксплуатационное управление»</div>
+                                </a>
+                                <div class="main-news-item-date">1 октября 2014</div>
+                            </div>
                         </div>
-                        <div class="main-news-item">
-                            <a href="#">
-                                <div class="main-news-item-name">Новое направление деятельности компании ОАО "1470 УМТО"</div>
-                                <div class="main-news-item-anonce">В соответствии с решением внеочередного общего собрания акционеров от 21.07.2014 г. ОАО «1470 УМТО» реорганизовано путем присоединения к нему ОАО «Промышленно-эксплуатационное управление»</div>
-                            </a>
-                            <div class="main-news-item-date">1 октября 2014</div>
-                        </div>
+                        <a href="#" class="main-news-prev"></a>
+                        <a href="#" class="main-news-next"></a>
                     </div>
-                    <a href="#" class="main-news-prev"></a>
-                    <a href="#" class="main-news-next"></a>
+                    <div class="main-news-all"><a href="#">все новости</a></div>
                 </div>
-                <div class="main-news-all"><a href="#">все новости</a></div>
             </div>
         </div>
         <!-- main END -->

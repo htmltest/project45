@@ -138,15 +138,22 @@
                     <div class="header-phones-callback">
                         <form action="windows/success.html" method="post">
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Ваше имя</div>
-                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Владимир Владимирович" class="required" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
                             </div>
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Телефон</div>
-                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="+7 (495) 123-45-67" class="required maskPhone" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="Телефон" class="required maskPhone" /></div>
                             </div>
                             <div class="header-phones-callback-submit"><input type="submit" value="Отправить" class="btn-order" /></div>
                         </form>
+                        <div class="header-phones-callback-error">
+                            <div class="header-phones-callback-error-title">произошла ошибка!</div>
+                            <div class="header-phones-callback-error-text"></div>
+                            <a href="#" class="header-phones-callback-error-close">закрыть</a>
+                        </div>
+                        <div class="header-phones-callback-success">
+                            <div class="header-phones-callback-success-title">мы вам перезвоним</div>
+                            <a href="#" class="header-phones-callback-success-close">закрыть</a>
+                        </div>
                     </div>
                 </div>
                 <div class="header-phones-hint">Ежедневно с 09:00 до 18:00</div>
@@ -332,6 +339,11 @@
                         <div class="set">
                             <div class="best-title"><span>элементы композиции</span> <a href="#" rel="Развернуть фильтр" class="filter-ctrl active">Cвернуть фильтр</a></div>
 
+                            <!-- filter preview -->
+                            <div class="filter-preview active">
+                            </div>
+                            <!-- filter preview END -->
+
                             <!-- filter -->
                             <div class="filter active">
                                 <form action="#" method="post">
@@ -339,9 +351,9 @@
                                         <div class="filter-label">Варианты облицовки:</div>
                                         <div class="filter-field">
                                             <div class="detail-color-list">
-                                                <div class="detail-color-item"><input type="radio" name="color" value="1" checked="checked" /><img src="files/detail-color-1.jpg" alt="" width="34" height="34" /></div>
-                                                <div class="detail-color-item"><input type="radio" name="color" value="2" /><img src="files/detail-color-2.jpg" alt="" width="34" height="34" /></div>
-                                                <div class="detail-color-item"><input type="radio" name="color" value="3" /><img src="files/detail-color-3.jpg" alt="" width="34" height="34" /></div>
+                                                <div class="detail-color-item" title="ольха"><input type="radio" name="color" value="1" checked="checked" /><img src="files/detail-color-1.jpg" alt="" width="34" height="34" /></div>
+                                                <div class="detail-color-item" title="вишня"><input type="radio" name="color" value="2" /><img src="files/detail-color-2.jpg" alt="" width="34" height="34" /></div>
+                                                <div class="detail-color-item" title="орех"><input type="radio" name="color" value="3" /><img src="files/detail-color-3.jpg" alt="" width="34" height="34" /></div>
                                             </div>
                                         </div>
                                     </div>

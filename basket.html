@@ -138,15 +138,22 @@
                     <div class="header-phones-callback">
                         <form action="windows/success.html" method="post">
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Ваше имя</div>
-                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Владимир Владимирович" class="required" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="name" value="" placeholder="Ваше имя" class="required" /></div>
                             </div>
                             <div class="header-phones-callback-field">
-                                <div class="header-phones-callback-label">Телефон</div>
-                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="+7 (495) 123-45-67" class="required maskPhone" /></div>
+                                <div class="header-phones-callback-input"><input type="text" name="phone" value="" placeholder="Телефон" class="required maskPhone" /></div>
                             </div>
                             <div class="header-phones-callback-submit"><input type="submit" value="Отправить" class="btn-order" /></div>
                         </form>
+                        <div class="header-phones-callback-error">
+                            <div class="header-phones-callback-error-title">произошла ошибка!</div>
+                            <div class="header-phones-callback-error-text"></div>
+                            <a href="#" class="header-phones-callback-error-close">закрыть</a>
+                        </div>
+                        <div class="header-phones-callback-success">
+                            <div class="header-phones-callback-success-title">мы вам перезвоним</div>
+                            <a href="#" class="header-phones-callback-success-close">закрыть</a>
+                        </div>
                     </div>
                 </div>
                 <div class="header-phones-hint">Ежедневно с 09:00 до 18:00</div>
