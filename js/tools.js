@@ -93,11 +93,20 @@ var sliderTimer     = null;
         $('form').each(function() {
             if ($(this).parents().filter('.header-phones-callback').length == 0) {
                 $(this).validate({
+                  igrone: '',
                   invalidHandler: function(form, validatorcalc) {
                       validatorcalc.showErrors();
                       $('.form-field').each(function() {
                           var curField = $(this);
-                          if (curField.find('label.error').length > 0) {
+                          if (curField.find('input.error').length > 0 || curField.find('textarea.error').length > 0) {
+                              curField.addClass('error');
+                          } else {
+                              curField.removeClass('error');
+                          }
+                      });
+                      $('.form-checkbox').each(function() {
+                          var curField = $(this);
+                          if (curField.find('input.error').length > 0) {
                               curField.addClass('error');
                           } else {
                               curField.removeClass('error');
@@ -117,6 +126,8 @@ var sliderTimer     = null;
                     $('.header-phones-callback-error-text').html('не введено имя');
                 } else if ($('.header-phones-callback-input input:last').hasClass('error')) {
                     $('.header-phones-callback-error-text').html('неверно указан формат телефона');
+                } else if ($('.header-phones-callback .form-checkbox input').hasClass('error')) {
+                    $('.header-phones-callback-error-text').html('необходимо принять условия политики конфиденциальности');
                 }
                 $('.header-phones-callback-error').show();
             },
